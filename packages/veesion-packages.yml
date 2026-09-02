@@ -1,0 +1,60 @@
+generated: '2026-09-02'
+method: searched
+source: >-
+  registry.npmjs.org search, pypi.org, rubygems.org, crates.io, github.com/veesion-io,
+  github.com/veesion, https://veesion.io/en/ (full English site crawl)
+name: Veesion packages and SDKs
+description: >-
+  Registry and repository search for a first-party Veesion client library. Nothing official was
+  found on any registry, and no SDK, client library or code sample is referenced anywhere on
+  veesion.io. Veesion's GitHub organisation (veesion-io, 17 public repositories) contains research
+  forks — Detectron2, YOLOv7, YOLOV, LLaVA-NeXT, MogFace, TRAM, MotionAGFormer, SRFormer,
+  tensorrtx, vedadet — plus an opencv-python build toolchain and one public release-artifact repo
+  for the on-premise "Veesion Setup" installer. None of these is a client for a Veesion API.
+packages: []
+official_count: 0
+registries_searched:
+- registry: npm
+  endpoint: https://registry.npmjs.org/-/v1/search?text=veesion
+  status: 200
+  matches: 0
+  note: No package published under a Veesion-controlled name or scope.
+- registry: pypi
+  endpoint: https://pypi.org/pypi/veesion/json
+  status: 200
+  matches: 0
+  note: >-
+    NAME COLLISION — DO NOT CLAIM. The PyPI name "veesion" (v0.1, published 2023-12-28) is an
+    unrelated OpenCV wrapper by Isao Toyama (isao@isaotoyama.com), homepage
+    https://github.com/isaotoyama/cvision. It is not authored, maintained or endorsed by
+    Veesion SAS and must never be marked official:true.
+- registry: rubygems
+  endpoint: https://rubygems.org/api/v1/search.json?query=veesion
+  status: 200
+  matches: 0
+- registry: crates.io
+  endpoint: https://crates.io/api/v1/crates?q=veesion
+  status: 200
+  matches: 0
+repositories_searched:
+- url: https://github.com/veesion-io
+  status: 200
+  public_repos: 17
+  client_libraries: 0
+  note: Computer-vision research forks and an installer release repo; no API client.
+- url: https://github.com/veesion
+  status: 200
+  public_repos: 0
+  note: Empty organisation, created 2016; not the active Veesion org.
+non_client_artifacts:
+- name: veesion-setup-releases
+  url: https://github.com/veesion-io/veesion-setup-releases
+  registry: github-releases
+  official: true
+  version: v0.2.0
+  published: '2026-04-30'
+  note: >-
+    Public release artifacts for "Veesion Setup", the on-premise installer for the in-store
+    appliance (source is in a private repo). This is a deployment installer for the product,
+    NOT an API client library, so it is recorded here but is not counted as an SDK and no
+    SDKs pointer is emitted.

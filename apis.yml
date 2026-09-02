@@ -1,10 +1,22 @@
 aid: veesion
 name: Veesion
-description: 'Veesion is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  Veesion is a French computer-vision company that sells AI-powered shoplifting detection to
+  retailers. Its gesture-recognition models run against a store's existing CCTV cameras — either
+  on a compact on-site server or through a serverless integration — and analyse body movement and
+  concealment behaviour rather than faces, so no biometric identification is performed. When a
+  pattern associated with theft is recognised, the store team receives a short video alert in a
+  mobile app for review. Founded in 2018 and headquartered in Bordeaux, France (Veesion SAS, RCS
+  Nanterre 838 664 274), the company operates across supermarkets, hypermarkets, pharmacies and
+  independent retail stores in more than 25 countries, and raised a EUR 38M Series B to expand its
+  AI-powered loss-prevention platform. Veesion is sold as an end-user product through a direct and
+  partner sales motion; it publishes no public developer program, API reference, SDK or
+  machine-readable contract.
 url: https://raw.githubusercontent.com/api-evangelist/veesion/refs/heads/main/apis.yml
+image: https://veesion.io/wp-content/uploads/2023/06/veesion_gradiente.png
 x-type: company
 x-source: harvest:secondary-market
+x-harvest-listing: https://www.hiive.com/securities/veesion-stock
 x-tier: stub
 x-tier-reason: harvest
 specificationVersion: '0.20'
@@ -12,6 +24,14 @@ created: '2026-09-02'
 modified: '2026-09-02'
 tags:
 - Company
+- Artificial Intelligence
+- Computer Vision
+- Video Surveillance
+- Retail
+- Loss Prevention
+- Physical Security
+- Gesture Recognition
+- France
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -20,4 +40,52 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://www.hiive.com/securities/veesion-stock
+  url: https://veesion.io/en/
+- type: Blog
+  url: https://veesion.io/en/blog-veesion/
+- type: Support
+  url: https://veesion.io/en/contact-us/
+- type: PrivacyPolicy
+  url: https://veesion.io/en/privacy-policy/
+- type: TermsOfService
+  url: https://veesion.io/en/legal/
+- type: GitHubOrganization
+  url: https://github.com/veesion-io
+- type: CustomerPortal
+  url: https://portal.veesion.io/
+- type: Compliance
+  url: conformance/veesion-conformance.yml
+- type: DomainSecurity
+  url: security/veesion-domain-security.yml
+x-enrichment:
+  date: '2026-09-02'
+  status: minimal
+  artifacts_added: 7
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Veesion ships AI shoplifting detection as an installed end-user product for store staff —
+    a mobile alert app plus an on-site appliance — and publishes no developer surface at all:
+    the word "API" does not appear in the copy of any of the 157 pages in its own sitemap, and
+    every contract-discovery probe (OpenAPI, Swagger, GraphQL, WSDL, MCP tools/list, A2A agent
+    card) missed on veesion.io, www.veesion.io, portal.veesion.io, veesion.pro and demo.veesion.io.
+  evidence:
+  - url: https://veesion.io/llms.txt
+    status: 404
+  - url: https://veesion.io/openapi.json
+    status: 404
+  - url: https://veesion.io/.well-known/agent-card.json
+    status: 404
+  - url: https://veesion.io/.well-known/security.txt
+    status: 404
+  - url: https://veesion.io/en/pricing/
+    status: 404
+  - url: https://veesion.io/wp-json/
+    status: 401
+  - url: https://veesion.pro/openapi.json
+    status: 404
+  - url: https://veesion.io/page-sitemap1.xml
+    status: 200
+  checked: '2026-09-02'

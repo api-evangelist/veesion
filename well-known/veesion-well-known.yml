@@ -1,0 +1,147 @@
+generated: '2026-09-02'
+method: probed
+source: live anonymous GET of each /.well-known/ path on every Veesion-controlled host
+name: Veesion well-known probe
+description: >-
+  Probe record for RFC 8615 /.well-known/ documents across every host Veesion controls. Every
+  named path was requested anonymously with a browser User-Agent. Nothing was found: veesion.io
+  and www.veesion.io return the WordPress 404 template for every path, api.klaxon.veesion.io
+  returns a framework 404, and portal.veesion.io is an AngularJS single-page application whose
+  catch-all answers 200 with the same 4,955-byte app shell for EVERY path — an SPA shell, not a
+  document, and therefore recorded as a miss. No WellKnown or SecurityTxt pointer is emitted,
+  because no path returned a real document.
+hosts:
+- host: veesion.io
+  note: WordPress site; every miss returns the site 404 template (46,570 bytes of HTML).
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+- host: www.veesion.io
+  note: Same WordPress origin as the apex; identical 404 template on every path.
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+- host: portal.veesion.io
+  note: >-
+    FALSE-POSITIVE HOST. The customer portal is an AngularJS SPA whose server catch-all answers
+    HTTP 200 with the identical 4,955-byte HTML app shell (title "Veesion Portal") for every path
+    requested, including paths that cannot exist. Every 200 below is that shell, not a document,
+    and each is scored as a miss.
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: null
+    result: miss
+    body: HTML SPA shell (4955 bytes), not RFC 9116 text
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: null
+    result: miss
+    body: HTML SPA shell (4955 bytes), not JSON
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: null
+    result: miss
+    body: HTML SPA shell (4955 bytes), not JSON
+  - path: /.well-known/api-catalog
+    status: 200
+    file: null
+    result: miss
+    body: HTML SPA shell (4955 bytes), not a link set
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    file: null
+    result: miss
+    body: HTML SPA shell (4955 bytes), not JSON
+  - path: /.well-known/agent-card.json
+    status: 200
+    file: null
+    result: miss
+    body: HTML SPA shell (4955 bytes), not an AgentCard object
+  - path: /.well-known/agent.json
+    status: 200
+    file: null
+    result: miss
+    body: HTML SPA shell (4955 bytes), not an AgentCard object
+- host: api.klaxon.veesion.io
+  note: Undocumented internal service host; returns a 179-byte framework 404 for every path.
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+- host: veesion.pro
+  note: Separate Veesion-owned app domain (Vite SPA, hosts the theft calculator). Real 404s.
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+summary:
+  hosts_probed: 5
+  paths_probed: 31
+  documents_found: 0
+  security_txt: false
+  openid_configuration: false
+  api_catalog: false
+  agent_card: false

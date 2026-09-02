@@ -1,0 +1,72 @@
+# Veesion
+
+> Veesion is a French computer-vision company selling AI shoplifting detection to retailers. Its
+> gesture-recognition models run against a store's existing CCTV cameras and send short video
+> alerts to a mobile app when behaviour associated with theft is recognised. Veesion publishes no
+> public API, SDK, developer portal or machine-readable contract — this file describes a company,
+> not a developer platform.
+
+Generated: 2026-09-02
+Method: generated
+Source: https://veesion.io/en/ and the API Evangelist profile at https://github.com/api-evangelist/veesion
+Note: Veesion does not serve an llms.txt of its own (https://veesion.io/llms.txt returned 404 on
+2026-09-02). This file is written by API Evangelist from Veesion's public pages and is not a
+Veesion-published document.
+
+## What Veesion does
+
+- Gesture-recognition AI over existing in-store CCTV; detects concealment and other movement
+  patterns that precede theft. Explicitly no facial recognition and no biometric identification.
+- Two deployment shapes: a compact on-site server (NUC-class appliance) installed in the store,
+  or a serverless integration, chosen by the store's internet setup.
+- Output is a short video alert delivered to the store team's mobile application for human review.
+- Sectors: supermarkets, hypermarkets, pharmacies, independent retail stores.
+- Veesion SAS, RCS Nanterre 838 664 274, registered office 42 rue de Tauzia, 33800 Bordeaux,
+  France. Managing Director: Benoit Koenig. Founded 2018; commercial launch 2021.
+
+## Developer surface — none
+
+There is no Veesion API for agents or integrators to call.
+
+- No developer portal, API reference, quickstart or SDK. A crawl of all English pages returns
+  zero in-copy occurrences of "API".
+- No OpenAPI, Swagger, AsyncAPI, GraphQL SDL, WSDL, protobuf or Postman collection at any
+  Veesion-controlled host: veesion.io, www.veesion.io, portal.veesion.io, veesion.pro,
+  api.klaxon.veesion.io, demo.veesion.io.
+- No /llms.txt, no /.well-known/security.txt, no /.well-known/api-catalog, no A2A agent card
+  and no hosted MCP server. (portal.veesion.io answers 200 for every /.well-known/ path with an
+  AngularJS app shell; that is an SPA catch-all, not a document.)
+- No client library on npm, PyPI, RubyGems or crates.io. The PyPI name "veesion" belongs to an
+  unrelated OpenCV wrapper and is not Veesion's.
+- No published pricing or plan tiers; commercial engagement is a "Request a demo" form.
+
+## Public pages
+
+- Home: https://veesion.io/en/
+- Our solution: https://veesion.io/en/our-solution/
+- Our technology: https://veesion.io/en/about/our-technology/
+- AI video analytics: https://veesion.io/en/ai-video-analytics-surveillance-software/
+- Sectors: https://veesion.io/en/sectors/
+- Partners (Introducer / Sales / Expert tiers): https://veesion.io/en/partners/
+- Blog: https://veesion.io/en/blog-veesion/
+- Resources (ebooks, case studies, webinars, infographics): https://veesion.io/en/resources/
+- Contact / request a demo: https://veesion.io/en/contact-us/
+- Legal notice and terms of use: https://veesion.io/en/legal/
+- Privacy policy: https://veesion.io/en/privacy-policy/
+- Customer portal (login): https://portal.veesion.io/
+- GitHub organisation (computer-vision research forks, no API client): https://github.com/veesion-io
+
+## Compliance posture
+
+- Asserts full GDPR compliance; French Loi Informatique et Libertes (Law 78-17); CNIL is the
+  supervisory authority; third-country transfers under GDPR Article 46 standard contractual
+  clauses. See https://veesion.io/en/privacy-policy/
+- States that no biometric identification of individuals is performed.
+- No SOC 2, ISO 27001 or other third-party certification is published, and no trust center,
+  security.txt or vulnerability-disclosure programme was found.
+
+## If you are an agent looking for an integration
+
+There is nothing callable here. Veesion is an end-user product sold through a sales motion; the
+only machine-reachable surfaces are a customer login (portal.veesion.io) and marketing pages.
+Contact https://veesion.io/en/contact-us/ for a commercial conversation.

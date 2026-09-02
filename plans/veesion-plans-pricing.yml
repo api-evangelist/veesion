@@ -1,0 +1,34 @@
+generated: '2026-09-02'
+method: searched
+source: https://veesion.io/en/ (full English site + page sitemap https://veesion.io/page-sitemap1.xml)
+name: Veesion plans and pricing
+description: >-
+  Veesion publishes no pricing page and no plan tiers. There is no /pricing, /plans or /tarifs
+  route in the site's own page sitemap in any of its six languages (en, fr, es, it, pt, de), and
+  https://veesion.io/en/pricing/ returns 404. Every commercial path on the site funnels to a
+  "Request a demo" or "Contact us" form, and the partner programme is likewise structured as
+  business tiers (Introducer, Sales, Expert) reached through a contact form rather than a
+  published rate card. Pricing is quoted per store through a sales conversation.
+plans: []
+plan_count: 0
+pricing_model: contact-sales
+currency: null
+free_tier: false
+trial: null
+evidence:
+- url: https://veesion.io/en/pricing/
+  status: 404
+  note: No pricing route exists.
+- url: https://veesion.io/page-sitemap1.xml
+  status: 200
+  note: >-
+    157 published pages across six languages; no pricing, plans, tarifs, precios, prezzi or
+    preise page in the index.
+- url: https://veesion.io/en/partners/
+  status: 200
+  note: >-
+    Partner programme described as Introducer / Sales / Expert tiers with a contact form;
+    no commercial terms or rates published.
+- url: https://veesion.io/en/contact-us/
+  status: 200
+  note: The "Request a demo" form is the only route to a quote.

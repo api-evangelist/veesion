@@ -1,0 +1,29 @@
+generated: '2026-09-02'
+method: searched
+source: https://veesion.io/en/ (full English site crawl + contract discovery probes)
+name: Veesion rate limits
+description: >-
+  No rate limits are published, because Veesion publishes no API. A full crawl of the English
+  site returns zero occurrences of the word "API" in page content — the only matches in the HTML
+  are the WordPress `https://api.w.org/` link relation and the Vimeo `player.js` embed. There is
+  no developer portal, no API reference, and no documented quota, throttle, burst allowance,
+  RateLimit-* / X-RateLimit-* response header, or 429 behaviour anywhere on Veesion's public
+  surface. This is an honest zero, not an unchecked field.
+rate_limits: []
+limit_count: 0
+headers: []
+exhaustion_status: null
+retry_after: null
+evidence:
+- url: https://veesion.io/en/
+  status: 200
+  note: No API or developer content; zero in-copy mentions of "API".
+- url: https://veesion.io/en/about/our-technology/
+  status: 200
+  note: Technology page describes gesture recognition and GDPR posture; no API, no limits.
+- url: https://veesion.io/en/partners/
+  status: 200
+  note: Partner page is commercial only; zero occurrences of "API".
+- url: https://veesion.io/robots.txt
+  status: 200
+  note: Sitemap-only robots.txt; no docs or developer host disallowed or referenced.
