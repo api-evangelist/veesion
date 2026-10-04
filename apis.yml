@@ -25,7 +25,7 @@ modified: '2026-09-02'
 tags:
 - Company
 - Artificial Intelligence
-- Computer-Vision
+- Computer Vision
 - Video Surveillance
 - Retail
 - Loss Prevention
@@ -42,6 +42,7 @@ tags_raw:
 - Physical Security
 - Gesture Recognition
 - France
+- Computer-Vision
 apis: []
 maintainers:
 - FN: Kin Lane
