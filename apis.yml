@@ -50,6 +50,10 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: Plans
+  url: plans/veesion-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/veesion-rate-limits.yml
 - type: Website
   url: https://veesion.io/en/
 - type: Blog
